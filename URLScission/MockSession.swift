@@ -15,7 +15,7 @@ class URLScissionDefault {
     var currentRouter: URLScissionRouter?
 }
 
-class URLScissionRouter {
+public class URLScissionRouter {
     private let mockClient: MockClient?
 
     let urlSessionRedirect: Bool
@@ -35,7 +35,7 @@ class URLScissionRouter {
 }
 
 extension URLScissionRouter: SessionClient {
-    func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> SessionDataTask {
+    public func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> SessionDataTask {
         let isMocked = (self.mockClient?.isMocked(request: request) ?? false)
         let client: SessionClient = isMocked ? self.mockClient! : URLSession.shared
 

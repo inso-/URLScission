@@ -24,6 +24,7 @@ public class MockStorage {
         Logger.log("Registered mock “%@”", log: .mock, type: .debug, mock.name)
         mocks[mock.id] = mock
     }
+    public init() {}
 }
 
 extension MockStorage {
