@@ -1,0 +1,16 @@
+name: Test Mock
+id: Test
+method: GET
+url: http\://dummy.restapiexample.com/api/v1/employees
+status: 200
+data: |
+    {
+        "data" : [
+        {
+            "id" : "1",
+            "employee_salary" : "320800",
+            "employee_name" : "Tiger Nixon",
+            "employee_age" : "61",
+            "profile_image" : ""
+        }]
+    }
