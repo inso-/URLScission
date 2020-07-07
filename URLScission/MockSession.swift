@@ -15,13 +15,24 @@ class URLScissionDefault {
     var currentRouter: URLScissionRouter?
 }
 
+public class URLScission {
+
+    public static var mockStorage = MockStorage()
+
+    public static func start(logNetwork: Bool = true, urlSessionRedirect: Bool = true) {
+        _ = URLScissionRouter.init(mockStorage: mockStorage,
+                               logNetwork: logNetwork,
+                               urlSessionRedirect: urlSessionRedirect)
+    }
+}
+
 public class URLScissionRouter {
     private let mockClient: MockClient?
 
     let logNetwork: Bool
     let urlSessionRedirect: Bool
 
-    public init(mockStorage: MockStorage?, logNetwork: Bool = true, urlSessionRedirect: Bool = true) {
+    init(mockStorage: MockStorage?, logNetwork: Bool = true, urlSessionRedirect: Bool = true) {
         if let mockStorage = mockStorage {
             self.mockClient = MockClient(mockStorage: mockStorage)
         } else {
@@ -83,16 +94,16 @@ extension URLScissionRouter {
         let isMocked = (self.mockClient?.isMocked(request: request) ?? false)
         let logger = isMocked ? OSLog.mock : OSLog.network
 
-        Logger.log("[URLScission] Call 🚀 %@ : %@", log: logger, type: .debug, request.httpMethod ?? "unknow method", request.url?.absoluteString ?? "unkown" as String)
+        Logger.log("[URLScission] Call 🚀\n%@ : %@", log: logger, type: .debug, request.httpMethod ?? "unknow method", request.url?.absoluteString ?? "unkown" as String)
         if isMocked {
-            Logger.log("[URLScission] On Mock 🌔 %@: %@ header: %@ parameter:%@", log: logger,
+            Logger.log("[URLScission] On Mock 🌔\n%@: %@ header: %@ parameter:%@", log: logger,
                        type: .debug,
                        (request.url?.absoluteString ?? "unknow") as CVarArg,
                        request.httpMethod ?? "unknow method" as CVarArg,
                        (request.allHTTPHeaderFields?.description ?? "Empty") as CVarArg,
                        (request.httpBody?.base64EncodedString() ?? "No body") as CVarArg)
         } else {
-            Logger.log("[URLScission] On Server ☀️ %@: %@ header: %@  parameter: %@", log: logger,
+            Logger.log("[URLScission] On Server ☀️\n%@: %@ header: %@ parameter: %@", log: logger,
                        type: .debug,
                        (request.url?.absoluteString ?? "unknow"),
                        request.httpMethod ?? "unknow method",
@@ -106,34 +117,34 @@ extension URLScissionRouter {
         let logger = isMocked ? OSLog.mock : OSLog.network
 
         if let error = error, isMocked {
-            Logger.log("[URLScission] Error On Mock ❌🌔 %@ :\n%@",
+            Logger.log("[URLScission] Error On Mock ❌🌔\n%@\n%@",
                        log: logger,
                        type: .debug,
                        (request.url?.absoluteString ?? "") as CVarArg,
                        error.localizedDescription as CVarArg)
         } else if let error = error {
-            Logger.log("[URLScission] Error On Server ❌☀️ %@ :\n%@", log: logger,
+            Logger.log("[URLScission] Error On Server ❌☀️\n%@\n%@", log: logger,
                        type: .debug,
                        (request.url?.absoluteString ?? "") as CVarArg,
                        error.localizedDescription as CVarArg )
         }
         if let data = data, isMocked {
             let json = ((try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any])?.jsonPrintable) ?? String(decoding: data, as: UTF8.self) as NSString
-            Logger.log("[URLScission] Success On Mock ✅🌔 %@:\n", log: logger,
+            Logger.log("[URLScission] Success On Mock ✅🌔\n%@\n", log: logger,
                        type: .debug, data: json,
                        (request.url?.absoluteString ?? "") as CVarArg)
         } else if let data = data {
             let json = ((try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any])?.jsonPrintable) ?? String(decoding: data, as: UTF8.self) as NSString
-            Logger.log("[URLScission] Success On Server ✅☀️ %@:\n", log: logger,
+            Logger.log("[URLScission] Success On Server ✅☀️\n%@\n", log: logger,
                        type: .debug, data: json,
                        (request.url?.absoluteString ?? "") as CVarArg)
         } else if isMocked {
-            Logger.log("[URLScission] Success %@ On Mock ✅🌔 :\n%@", log: logger,
+            Logger.log("[URLScission] Success %@ On Mock ✅🌔\n%@", log: logger,
                        type: .debug,
                        (request.url?.absoluteString ?? "") as CVarArg,
                        "No Data" as CVarArg)
         } else {
-            Logger.log("[URLScission] Success On Server ✅☀️ %@ :\n%@", log: logger,
+            Logger.log("[URLScission] Success On Server ✅☀️\n%@ :\n%@", log: logger,
                        type: .debug,
                        (request.url?.absoluteString ?? "") as CVarArg,
                        "No Data" as CVarArg)

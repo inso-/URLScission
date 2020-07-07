@@ -16,7 +16,7 @@ public class Logger {
         serialQueue.sync {
             os_log(message, dso: #dsohandle, log: log, type: type, args)
             if let data = data {
-                os_log("[URLScission] Data: %@", dso: #dsohandle, log: log, type: type, data)
+                os_log("[URLScission] Data:\n%@", dso: #dsohandle, log: log, type: type, data)
             }
         }
     }

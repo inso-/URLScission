@@ -24,14 +24,13 @@ class URLScissionTests: XCTestCase {
         var employee_age: String
     }
 
-    lazy private var mockStorage = MockStorage()
-    private var mockRouter: URLScissionRouter?
+    lazy private var mockStorage = URLScission.mockStorage
 
     lazy private var networkConfiguration = RestNetworkConfiguration(host: Self.host, https: true)
     lazy private var networkClient: RestServiceNetwork = RestServiceNetwork(configuration: networkConfiguration)
 
     override func setUpWithError() throws {
-        mockRouter = URLScissionRouter(mockStorage: mockStorage, urlSessionRedirect: true)
+        URLScission.start()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
