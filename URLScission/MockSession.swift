@@ -18,14 +18,16 @@ class URLScissionDefault {
 public class URLScissionRouter {
     private let mockClient: MockClient?
 
+    let logNetwork: Bool
     let urlSessionRedirect: Bool
 
-    public init(mockStorage: MockStorage?, urlSessionRedirect: Bool = true) {
+    public init(mockStorage: MockStorage?, logNetwork: Bool = true, urlSessionRedirect: Bool = true) {
         if let mockStorage = mockStorage {
             self.mockClient = MockClient(mockStorage: mockStorage)
         } else {
             self.mockClient = nil
         }
+        self.logNetwork = logNetwork
         self.urlSessionRedirect = urlSessionRedirect
         URLScissionDefault.shared.currentRouter = self
         if self.urlSessionRedirect {
@@ -39,9 +41,14 @@ extension URLScissionRouter: SessionClient {
         let isMocked = (self.mockClient?.isMocked(request: request) ?? false)
         let client: SessionClient = isMocked ? self.mockClient! : URLSession.shared
 
-        self.logRequest(request: request)
-        return client.dataTask(with: request, completionHandler: { data, urlResponse, error in
-            self.logRequestResponse(request: request, data: data, urlResponse: urlResponse, error: error)
+        if logNetwork {
+            self.logRequest(request: request)
+        }
+        return client.dataTask(with: request, completionHandler: { [weak self] data, urlResponse, error in
+            guard let self = self else { return }
+            if self.logNetwork {
+                self.logRequestResponse(request: request, data: data, urlResponse: urlResponse, error: error)
+            }
             guard isMocked else {
                 completionHandler(data, urlResponse, error)
                 return
