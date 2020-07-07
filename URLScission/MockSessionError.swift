@@ -39,7 +39,6 @@ extension MockSessionError: Error {
             return "Not implemented"
         case .networkError(let errorString):
             return errorString
-
         case .noGraphQLClient:
             return "No graphQL client"
         }

@@ -20,7 +20,7 @@ public class URLScissionRouter {
 
     let urlSessionRedirect: Bool
 
-    init(mockStorage: MockStorage?, urlSessionRedirect: Bool = true) {
+    public init(mockStorage: MockStorage?, urlSessionRedirect: Bool = true) {
         if let mockStorage = mockStorage {
             self.mockClient = MockClient(mockStorage: mockStorage)
         } else {
