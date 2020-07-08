@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D39093E424B161B2003B4E27 /* URLScission.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39093DA24B161B2003B4E27 /* URLScission.framework */; };
-		D39093E924B161B2003B4E27 /* URLScissionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39093E824B161B2003B4E27 /* URLScissionTests.swift */; };
+		D31C811024B5499B0057A43D /* URLScissionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37CC51024B546180076AB7A /* URLScissionTests.swift */; };
+		D37CC52024B546C00076AB7A /* URLScission.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39093DA24B161B2003B4E27 /* URLScission.framework */; };
+		D37CC52824B5470A0076AB7A /* RestServiceNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37CC51224B546180076AB7A /* RestServiceNetwork.swift */; };
+		D37CC52B24B547F20076AB7A /* test.mock in Resources */ = {isa = PBXBuildFile; fileRef = D37CC50F24B546180076AB7A /* test.mock */; };
+		D37CC52C24B5486E0076AB7A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D37CC51124B546180076AB7A /* Info.plist */; };
 		D39093EB24B161B2003B4E27 /* URLScission.h in Headers */ = {isa = PBXBuildFile; fileRef = D39093DD24B161B2003B4E27 /* URLScission.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D39093F724B164CE003B4E27 /* MockSessionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39093F424B164CE003B4E27 /* MockSessionError.swift */; };
 		D39093F824B164CE003B4E27 /* MockSessionTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39093F524B164CE003B4E27 /* MockSessionTask.swift */; };
@@ -21,12 +24,10 @@
 		D390940624B164E4003B4E27 /* MockStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39093FF24B164E4003B4E27 /* MockStorage.swift */; };
 		D390940724B164E4003B4E27 /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D390940024B164E4003B4E27 /* Mock.swift */; };
 		D390940924B1664B003B4E27 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D390940824B1664B003B4E27 /* Logger.swift */; };
-		D390940B24B17A07003B4E27 /* RestServiceNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = D390940A24B17A07003B4E27 /* RestServiceNetwork.swift */; };
-		D390940D24B2B2C5003B4E27 /* test.mock in Resources */ = {isa = PBXBuildFile; fileRef = D390940C24B2B2C4003B4E27 /* test.mock */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D39093E524B161B2003B4E27 /* PBXContainerItemProxy */ = {
+		D37CC52124B546C00076AB7A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D39093D124B161B1003B4E27 /* Project object */;
 			proxyType = 1;
@@ -36,12 +37,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D37CC50F24B546180076AB7A /* test.mock */ = {isa = PBXFileReference; lastKnownFileType = text; name = test.mock; path = Tests/URLScissionTests/test.mock; sourceTree = SOURCE_ROOT; };
+		D37CC51024B546180076AB7A /* URLScissionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLScissionTests.swift; path = Tests/URLScissionTests/URLScissionTests.swift; sourceTree = SOURCE_ROOT; };
+		D37CC51124B546180076AB7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Tests/URLScissionTests/Info.plist; sourceTree = SOURCE_ROOT; };
+		D37CC51224B546180076AB7A /* RestServiceNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestServiceNetwork.swift; path = Tests/URLScissionTests/RestServiceNetwork.swift; sourceTree = SOURCE_ROOT; };
+		D37CC51B24B546C00076AB7A /* URLScissionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = URLScissionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D37CC51D24B546C00076AB7A /* URLScissionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLScissionTests.swift; sourceTree = "<group>"; };
+		D37CC51F24B546C00076AB7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D39093DA24B161B2003B4E27 /* URLScission.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = URLScission.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D39093DD24B161B2003B4E27 /* URLScission.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLScission.h; sourceTree = "<group>"; };
 		D39093DE24B161B2003B4E27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D39093E324B161B2003B4E27 /* URLScissionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = URLScissionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D39093E824B161B2003B4E27 /* URLScissionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLScissionTests.swift; sourceTree = "<group>"; };
-		D39093EA24B161B2003B4E27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D39093F424B164CE003B4E27 /* MockSessionError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockSessionError.swift; sourceTree = "<group>"; };
 		D39093F524B164CE003B4E27 /* MockSessionTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockSessionTask.swift; sourceTree = "<group>"; };
 		D39093F624B164CE003B4E27 /* MockSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockSession.swift; sourceTree = "<group>"; };
@@ -53,11 +58,17 @@
 		D39093FF24B164E4003B4E27 /* MockStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockStorage.swift; sourceTree = "<group>"; };
 		D390940024B164E4003B4E27 /* Mock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
 		D390940824B1664B003B4E27 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		D390940A24B17A07003B4E27 /* RestServiceNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestServiceNetwork.swift; sourceTree = "<group>"; };
-		D390940C24B2B2C4003B4E27 /* test.mock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.mock; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D37CC51824B546C00076AB7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D37CC52024B546C00076AB7A /* URLScission.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D39093D724B161B2003B4E27 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -65,22 +76,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D39093E024B161B2003B4E27 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D39093E424B161B2003B4E27 /* URLScission.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D37CC51C24B546C00076AB7A /* URLScissionTests */ = {
+			isa = PBXGroup;
+			children = (
+				D37CC51D24B546C00076AB7A /* URLScissionTests.swift */,
+				D37CC51F24B546C00076AB7A /* Info.plist */,
+			);
+			path = URLScissionTests;
+			sourceTree = "<group>";
+		};
 		D39093D024B161B1003B4E27 = {
 			isa = PBXGroup;
 			children = (
 				D39093DC24B161B2003B4E27 /* URLScission */,
 				D39093E724B161B2003B4E27 /* URLScissionTests */,
+				D37CC51C24B546C00076AB7A /* URLScissionTests */,
 				D39093DB24B161B2003B4E27 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				D39093DA24B161B2003B4E27 /* URLScission.framework */,
-				D39093E324B161B2003B4E27 /* URLScissionTests.xctest */,
+				D37CC51B24B546C00076AB7A /* URLScissionTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,12 +130,13 @@
 		D39093E724B161B2003B4E27 /* URLScissionTests */ = {
 			isa = PBXGroup;
 			children = (
-				D390940A24B17A07003B4E27 /* RestServiceNetwork.swift */,
-				D39093E824B161B2003B4E27 /* URLScissionTests.swift */,
-				D390940C24B2B2C4003B4E27 /* test.mock */,
-				D39093EA24B161B2003B4E27 /* Info.plist */,
+				D37CC51124B546180076AB7A /* Info.plist */,
+				D37CC51224B546180076AB7A /* RestServiceNetwork.swift */,
+				D37CC50F24B546180076AB7A /* test.mock */,
+				D37CC51024B546180076AB7A /* URLScissionTests.swift */,
 			);
-			path = URLScissionTests;
+			name = URLScissionTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +153,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		D37CC51A24B546C00076AB7A /* URLScissionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D37CC52324B546C00076AB7A /* Build configuration list for PBXNativeTarget "URLScissionTests" */;
+			buildPhases = (
+				D37CC51724B546C00076AB7A /* Sources */,
+				D37CC51824B546C00076AB7A /* Frameworks */,
+				D37CC51924B546C00076AB7A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D37CC52224B546C00076AB7A /* PBXTargetDependency */,
+			);
+			name = URLScissionTests;
+			productName = URLScissionTests;
+			productReference = D37CC51B24B546C00076AB7A /* URLScissionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		D39093D924B161B2003B4E27 /* URLScission */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D39093EE24B161B2003B4E27 /* Build configuration list for PBXNativeTarget "URLScission" */;
@@ -157,24 +189,6 @@
 			productReference = D39093DA24B161B2003B4E27 /* URLScission.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D39093E224B161B2003B4E27 /* URLScissionTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D39093F124B161B2003B4E27 /* Build configuration list for PBXNativeTarget "URLScissionTests" */;
-			buildPhases = (
-				D39093DF24B161B2003B4E27 /* Sources */,
-				D39093E024B161B2003B4E27 /* Frameworks */,
-				D39093E124B161B2003B4E27 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D39093E624B161B2003B4E27 /* PBXTargetDependency */,
-			);
-			name = URLScissionTests;
-			productName = URLScissionTests;
-			productReference = D39093E324B161B2003B4E27 /* URLScissionTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -185,12 +199,12 @@
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = Thomas.moussajee;
 				TargetAttributes = {
+					D37CC51A24B546C00076AB7A = {
+						CreatedOnToolsVersion = 11.5;
+					};
 					D39093D924B161B2003B4E27 = {
 						CreatedOnToolsVersion = 11.5;
 						LastSwiftMigration = 1150;
-					};
-					D39093E224B161B2003B4E27 = {
-						CreatedOnToolsVersion = 11.5;
 					};
 				};
 			};
@@ -208,12 +222,21 @@
 			projectRoot = "";
 			targets = (
 				D39093D924B161B2003B4E27 /* URLScission */,
-				D39093E224B161B2003B4E27 /* URLScissionTests */,
+				D37CC51A24B546C00076AB7A /* URLScissionTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D37CC51924B546C00076AB7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D37CC52B24B547F20076AB7A /* test.mock in Resources */,
+				D37CC52C24B5486E0076AB7A /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D39093D824B161B2003B4E27 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -221,17 +244,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D39093E124B161B2003B4E27 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D390940D24B2B2C5003B4E27 /* test.mock in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D37CC51724B546C00076AB7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D31C811024B5499B0057A43D /* URLScissionTests.swift in Sources */,
+				D37CC52824B5470A0076AB7A /* RestServiceNetwork.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D39093D624B161B2003B4E27 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -250,26 +274,53 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D39093DF24B161B2003B4E27 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D390940B24B17A07003B4E27 /* RestServiceNetwork.swift in Sources */,
-				D39093E924B161B2003B4E27 /* URLScissionTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D39093E624B161B2003B4E27 /* PBXTargetDependency */ = {
+		D37CC52224B546C00076AB7A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D39093D924B161B2003B4E27 /* URLScission */;
-			targetProxy = D39093E524B161B2003B4E27 /* PBXContainerItemProxy */;
+			targetProxy = D37CC52124B546C00076AB7A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		D37CC52424B546C00076AB7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V7X8JQZ4Y5;
+				INFOPLIST_FILE = Tests/URLScissionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Thomas.moussajee.URLScissionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D37CC52524B546C00076AB7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V7X8JQZ4Y5;
+				INFOPLIST_FILE = Tests/URLScissionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Thomas.moussajee.URLScissionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		D39093EC24B161B2003B4E27 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -449,49 +500,18 @@
 			};
 			name = Release;
 		};
-		D39093F224B161B2003B4E27 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V7X8JQZ4Y5;
-				INFOPLIST_FILE = URLScissionTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Thomas.moussajee.URLScissionTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		D39093F324B161B2003B4E27 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V7X8JQZ4Y5;
-				INFOPLIST_FILE = URLScissionTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Thomas.moussajee.URLScissionTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D37CC52324B546C00076AB7A /* Build configuration list for PBXNativeTarget "URLScissionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D37CC52424B546C00076AB7A /* Debug */,
+				D37CC52524B546C00076AB7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D39093D424B161B1003B4E27 /* Build configuration list for PBXProject "URLScission" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -506,15 +526,6 @@
 			buildConfigurations = (
 				D39093EF24B161B2003B4E27 /* Debug */,
 				D39093F024B161B2003B4E27 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D39093F124B161B2003B4E27 /* Build configuration list for PBXNativeTarget "URLScissionTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D39093F224B161B2003B4E27 /* Debug */,
-				D39093F324B161B2003B4E27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
